@@ -1,6 +1,7 @@
 package com.luisseidel.adapters.inbound.request;
 
 public class EnderecoRequest {
+
     private String cep;
 
     public String getCep() {

@@ -1,6 +1,5 @@
 package com.luisseidel.adapters.inbound;
 
-import com.luisseidel.adapters.inbound.mapper.EnderecoRequestToEnderecoMapper;
 import com.luisseidel.adapters.inbound.request.EnderecoRequest;
 import com.luisseidel.application.core.domain.Endereco;
 import com.luisseidel.application.core.service.BuscarEnderecoService;
@@ -20,12 +19,8 @@ public class EnderecoController {
     @Inject
     private BuscarEnderecoService buscarEnderecoService;
 
-    @Inject
-    private EnderecoRequestToEnderecoMapper enderecoRequestToEnderecoMapper;
-
     @POST
-    public Endereco salvarEndereco(EnderecoRequest enderecoRequest) {
-        var endereco = enderecoRequestToEnderecoMapper.mapper(enderecoRequest);
-        return buscarEnderecoService.buscarEndereco(enderecoRequest.getCep());
+    public Endereco buscarEndereco(EnderecoRequest enderecoRequest) {
+        return buscarEnderecoService.buscar(enderecoRequest.getCep());
     }
 }

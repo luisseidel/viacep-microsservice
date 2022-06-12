@@ -1,21 +1,21 @@
 package com.luisseidel.application.core.domain;
 
 
-public class   Endereco {
+public class Endereco {
 
-    private Long codigoIbge;
+    private Long ibge;
     private String uf;
     private String cep;
-    private String cidade;
+    private String localidade;
     private String bairro;
     private String logradouro;
 
-    public Long getCodigoIbge() {
-        return codigoIbge;
+    public Long getIbge() {
+        return ibge;
     }
 
-    public void setCodigoIbge(Long codigoIbge) {
-        this.codigoIbge = codigoIbge;
+    public void setIbge(Long ibge) {
+        this.ibge = ibge;
     }
 
     public String getUf() {
@@ -34,12 +34,12 @@ public class   Endereco {
         this.cep = cep;
     }
 
-    public String getCidade() {
-        return cidade;
+    public String getLocalidade() {
+        return localidade;
     }
 
-    public void setCidade(String cidade) {
-        this.cidade = cidade;
+    public void setLocalidade(String localidade) {
+        this.localidade = localidade;
     }
 
     public String getBairro() {
